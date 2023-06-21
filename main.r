@@ -15,3 +15,17 @@ pageviews <- google_analytics(view_id,
                               dimensions = c("yearMonth"),
                               anti_sample = TRUE)
 
+make_csv <- write.csv(pageviews, "~/projects/ga-history/data/pageviews.csv")
+
+# get history of device categories
+device_cat <- google_analytics(view_id,
+                               date_range = c("2013-01-01", "2023-01-01"),
+                               metrics = c("uniquePageviews", "sessions"),
+                               dimensions = c("yearMonth", "deviceCategory"),
+                               anti_sample = TRUE)
+
+make_csv <- write.csv(device_cat, "~/projects/ga-history/data/device_cat.csv")
+
+# get history of device screen size 
+
+
