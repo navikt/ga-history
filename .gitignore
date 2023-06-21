@@ -1,0 +1,7 @@
+creds.json
+.Renviron
+.Rdata
+.Rproj.user
+.Rhistory
+data/
+renv/
